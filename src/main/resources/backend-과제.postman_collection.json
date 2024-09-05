@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "cdab98bf-54d7-445e-89bb-e71ffd7b389a",
+		"name": "backend-과제",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9365376",
+		"_collection_link": "https://galactic-spaceship-3126.postman.co/workspace/musinsa~4f39ab11-145f-4cac-9dec-7092f528a11b/collection/9365376-cdab98bf-54d7-445e-89bb-e71ffd7b389a?action=share&source=collection_link&creator=9365376"
+	},
+	"item": [
+		{
+			"name": "1.카테고리별최저가",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/customer/coordination/category/lowest-price",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"customer",
+						"coordination",
+						"category",
+						"lowest-price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.가장저렴한브랜드카테고리",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/customer/coordination/brand/lowest-price",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"customer",
+						"coordination",
+						"brand",
+						"lowest-price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.카테고리_최저_최고가_브랜드 Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/customer/coordination/category/:categoryName/min-max-brand",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"customer",
+						"coordination",
+						"category",
+						":categoryName",
+						"min-max-brand"
+					],
+					"variable": [
+						{
+							"key": "categoryName",
+							"value": "스니커즈"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4-1.브랜드등록",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"신규브랜드\",\n    \"useYn\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/admin/brand",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"admin",
+						"brand"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4-2.브랜드수정",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"브랜드명수정\",\n    \"useYn\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/admin/brand/:brandId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"admin",
+						"brand",
+						":brandId"
+					],
+					"variable": [
+						{
+							"key": "brandId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4-3.브랜드삭제",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"브랜드명수정\",\n    \"useYn\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/admin/brand/:brandId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"admin",
+						"brand",
+						":brandId"
+					],
+					"variable": [
+						{
+							"key": "brandId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5-1.상품등록",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"신규상품\",\n    \"useYn\": true,\n    \"categoryId\": 1,\n    \"brandId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/admin/brand",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"admin",
+						"brand"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5-2.상품수정",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"브랜드명수정\",\n    \"useYn\": true,\n    \"categoryId\": 1,\n    \"brandId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/admin/product/:productId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"admin",
+						"product",
+						":productId"
+					],
+					"variable": [
+						{
+							"key": "productId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5-3.상품삭제",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"브랜드명수정\",\n    \"useYn\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/admin/product/:productId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"admin",
+						"product",
+						":productId"
+					],
+					"variable": [
+						{
+							"key": "productId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
