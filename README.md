@@ -45,9 +45,6 @@
 ```
 - 테스트용으로 사용한 postman : [backend-과제.postman_collection.json](src%2Fmain%2Fresources%2Fbackend-%EA%B3%BC%EC%A0%9C.postman_collection.json)
 
-## 실행 방법
-- front 페이지 구현 : 시간되면 하자.. ㅠㅠ
-
 ## API 문서
 - http://localhost/swagger-ui/index.html
 
