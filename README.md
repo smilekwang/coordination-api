@@ -48,6 +48,6 @@
 ## API 문서
 - http://localhost/swagger-ui/index.html
 
-# DB
+## DB
 - schema : [db-schema.sql](src%2Fmain%2Fresources%2Fdb-schema.sql)
 - data : [db-data.sql](src%2Fmain%2Fresources%2Fdb-data.sql)
